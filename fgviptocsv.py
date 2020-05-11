@@ -103,7 +103,7 @@ def parse(fd):
                         if p_exiting_vip_block.search(line):
                                 in_vip_block = False
         
-        return (vip_list, vip_keys)
+        return (vip_list, order_keys)
 
 
 def generate_csv(results, keys, fd, newline, skip_header):
