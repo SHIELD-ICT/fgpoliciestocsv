@@ -114,7 +114,7 @@ def generate_csv(results, keys, fd, newline, skip_header):
         """
         if results and keys:
                 with open(fd,'wb') as fd_output:
-                        spamwriter = csv.writer(fd_output, delimiter=';')
+                        spamwriter = csv.writer(fd_output, delimiter=',', quoting=csv.QUOTE_NONNUMERIC)
                         
                         if not(skip_header):
                                 spamwriter.writerow(keys)
